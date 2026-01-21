@@ -41,7 +41,7 @@
   </p>
 
   <!-- GeoGebra container -->
-  <div id="ggb-element"></div>
+  <div id="ggb-element" style="width:100%; height:90vh;"></div>
 
   <footer>
     Δημιουργία: GeoGebra Classic · Φόρτωμα μέσω GitHub Pages
@@ -49,14 +49,14 @@
 
   <script>
     var params = {
-      "appName": "classic",
-      "width": 1200,
-      "height": 700,
-      "showToolBar": true,
-      "showAlgebraInput": true,
-      "showMenuBar": true,
-      "filename": "./03_Line_Family.ggb"
-    };
+      appName: "classic",
+      showToolBar: true,
+      showAlgebraInput: true,
+      showMenuBar: true,
+      useBrowserForJS: true,
+      // ΠΡΟΣΟΧΗ: ΜΟΝΟ filename, ΟΧΙ material_id
+      filename: "./03_Line_Family.ggb"
+  };
 
     var applet = new GGBApplet(params, true);
     window.addEventListener("load", function () {
