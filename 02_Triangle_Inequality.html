@@ -54,7 +54,7 @@
       showToolBar: false,
       showAlgebraInput: false,
       showMenuBar: false,
-      useBrowserForJS: true,
+      useBrowserForJS: false,
       showResetIcon: false,
       // ΠΡΟΣΟΧΗ: ΜΟΝΟ filename, ΟΧΙ material_id
       filename: "./02_Triangle_Inequality.ggb"
@@ -64,8 +64,8 @@
     window.addEventListener("load", function () {
       applet.inject("ggb-element");
       // Force Graphics-only perspective (hides Algebra View)
-      setTimeout(() => {ggbApplet.setPerspective("G");}, 200);});
-      //appletOnLoad: function(api) {api.setPerspective("G");}
+      //setTimeout(() => {ggbApplet.setPerspective("G");}, 200);});
+      appletOnLoad: function(api) {api.setPerspective("G");}
   </script>
 
 </body>
