@@ -63,7 +63,8 @@
     var applet = new GGBApplet(params, true);
     window.addEventListener("load", function () {
       applet.inject("ggb-element");
-    });
+      // Force Graphics-only perspective (hides Algebra View)
+      setTimeout(() => {ggbApplet.setPerspective("G");}, 200);});
   </script>
 
 </body>
