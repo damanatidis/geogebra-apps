@@ -75,6 +75,9 @@
     // ---------------- GeoGebra embed ----------------
     const params = {
       appName: "classic",
+
+      appletOnLoad: function (api) {api.setPerspective("G");},
+      
       filename: "01_Function_Tangent.ggb",
 
       width: 1100,
