@@ -6,7 +6,9 @@
 
   <!-- GeoGebra deploy script -->
   <script src="https://www.geogebra.org/apps/deployggb.js"></script>
-
+  
+  <script>function ggbOnInit() {ggbApplet.setPerspective("G");}</script>
+  
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -65,7 +67,7 @@
       applet.inject("ggb-element");
       // Force Graphics-only perspective (hides Algebra View)
       //setTimeout(() => {ggbApplet.setPerspective("G");}, 200);});
-      appletOnLoad: function(api) {api.setPerspective("G");}
+      //appletOnLoad: function(api) {api.setPerspective("G");}
   </script>
 
 </body>
